@@ -78,6 +78,8 @@ public class UserEntity {
 //
         return authorities;
     }
+
+
     public UserEntity() {
     }
 

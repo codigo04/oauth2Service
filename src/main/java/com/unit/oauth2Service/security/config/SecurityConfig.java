@@ -72,7 +72,7 @@ public class SecurityConfig {
         });
         http.authorizeHttpRequests(auth -> {
             auth .requestMatchers("/", "/auth/**", "/oauth2/**").permitAll();
-            auth .requestMatchers("/error").permitAll();
+            auth.requestMatchers("/error").permitAll();
             auth.requestMatchers("/private/user/**").authenticated();
             auth.requestMatchers("/auth/libre/**").authenticated();
             auth.requestMatchers("/api/profile/**").hasAnyRole("ADMIN", "USER");
